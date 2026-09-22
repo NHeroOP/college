@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: white;
+    padding: 18px 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+}
+
+.college-name h1 {
+    margin: 0;
+    color: #174a7e;
+    font-size: 28px;
+}
+
+.college-name p {
+    margin: 3px 0 0;
+    color: #555;
+}
+
+nav {
+    background: #174a7e;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 13px 18px;
+    display: block;
+}
+
+.navbar a:hover {
+    background: #0e355b;
+}
+
+main {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+.hero {
+    min-height: 360px;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+                url("images/college.jpg") center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin: 0 0 8px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.section {
+    background: white;
+    padding: 25px;
+    margin-top: 22px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.section h2 {
+    color: #174a7e;
+    text-align: center;
+    margin-top: 0;
+}
+
+.button {
+    display: inline-block;
+    background: #174a7e;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background: #0e355b;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 31%;
+    min-width: 240px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card h3 {
+    color: #174a7e;
+    margin-bottom: 5px;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.info-table th,
+.info-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+.info-table th {
+    background: #174a7e;
+    color: white;
+}
+
+.info-table tr:nth-child(even) {
+    background: #f0f5fa;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 7px;
+    border: 2px solid #ddd;
+}
+
+.gallery img:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+.form-box {
+    background: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.radio-group label {
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 15px;
+}
+
+.radio-group input {
+    width: auto;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    padding: 11px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #174a7e;
+    color: white;
+}
+
+button:hover {
+    background: #0e355b;
+}
+
+button[type="reset"] {
+    background: #777;
+}
+
+button[type="reset"]:hover {
+    background: #555;
+}
+
+footer {
+    margin-top: 30px;
+    background: #174a7e;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+@media (max-width: 700px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .college-name h1 {
+        font-size: 22px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar a {
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
