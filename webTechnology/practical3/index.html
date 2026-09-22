@@ -28,12 +28,22 @@
     </div>
 </nav>
 <main>
-<section class="hero">
-    <div>
+<section class="hero" id="hero">
+
+    <button class="hero-arrow left" onclick="previousImage()">
+        &#10094;
+    </button>
+
+    <div class="hero-content">
         <h2>Welcome to GCET, Jammu</h2>
         <p>Learn, Build and Grow with us.</p>
         <a class="button" href="about.html">Know More</a>
     </div>
+
+    <button class="hero-arrow right" onclick="nextImage()">
+        &#10095;
+    </button>
+
 </section>
 
 <section class="section">
@@ -58,5 +68,44 @@
     <p>&copy; 2026 Govt. College of Engineering & Technology, Jammu. All Rights Reserved.</p>
     <p>Email: info@gcetj.edu | Phone: +91 12345 67890</p>
 </footer>
+
+<script>
+    const images = [
+        "images/college.jpg",
+        "images/college2.png",
+        "images/college3.png",
+        "images/college4.png"
+    ];
+
+    let currentImage = 0;
+
+    const hero = document.getElementById("hero");
+
+    function showImage() {
+        hero.style.backgroundImage =
+            "linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), " +
+            "url('" + images[currentImage] + "')";
+    }
+
+    function nextImage() {
+        currentImage++;
+
+        if (currentImage >= images.length) {
+            currentImage = 0;
+        }
+
+        showImage();
+    }
+
+    function previousImage() {
+        currentImage--;
+
+        if (currentImage < 0) {
+            currentImage = images.length - 1;
+        }
+
+        showImage();
+    }
+</script>
 </body>
 </html>

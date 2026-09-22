@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Faculty - GCET, Jammu</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <header>
     <div class="header-content">
         <img src="images/logo.svg" alt="College Logo" class="logo">
@@ -27,41 +32,193 @@
         <a href="admission.html">Admission Form</a>
     </div>
 </nav>
+
 <main>
+
 <section class="section">
     <h2>Our Faculty</h2>
     <div class="cards">
-        <div class="card">
-            <img src="images/faculty.svg" alt="Faculty member">
-            <h3>Dr. Anil Sharma</h3>
-            <p>Professor<br>Computer Science Department</p>
+
+        <!-- Faculty 1 -->
+
+        <div class="card faculty-card">
+            <img src="images/faculty/faculty1.png" alt="Faculty member">
+            <h3>Dr. Simi Dutta</h3>
+            <p>
+                Professor & Head<br>
+                Computer Science Department
+            </p>
+            <button onclick="showDetails('simi')">
+                View Details
+            </button>
         </div>
-        <div class="card">
-            <img src="images/faculty.svg" alt="Faculty member">
-            <h3>Dr. Riya Verma</h3>
-            <p>Associate Professor<br>Electronics Department</p>
+
+        <!-- Faculty 2 -->
+
+        <div class="card faculty-card">
+            <img src="images/faculty/faculty2.png" alt="Faculty member">
+            <h3>Dr. Bhawna Sharma</h3>
+            <p>
+                Professor<br>
+                Computer Science Department
+            </p>
+
+            <button onclick="showDetails('bhawna')">
+                View Details
+            </button>
         </div>
-        <div class="card">
-            <img src="images/faculty.svg" alt="Faculty member">
-            <h3>Dr. P. Singh</h3>
-            <p>Assistant Professor<br>Mechanical Department</p>
+
+        <!-- Faculty 3 -->
+
+        <div class="card faculty-card">
+            <img src="images/faculty/faculty3.png" alt="Faculty member">
+            <h3>Dr. Jyoti Kumar Mahajan</h3>
+            <p>
+                Assistant Professor<br>
+                Computer Science Department
+            </p>
+            <button onclick="showDetails('jyoti')">
+                View Details
+            </button>
         </div>
-        <div class="card">
-            <img src="images/faculty.svg" alt="Faculty member">
-            <h3>Dr. Neha Gupta</h3>
-            <p>Assistant Professor<br>Civil Engineering Department</p>
+
+        <!-- Faculty 4 -->
+
+        <div class="card faculty-card">
+            <img src="images/faculty/faculty4.png" alt="Faculty member">
+            <h3>Ms. Sheetal Gandotra</h3>
+            <p>
+                Associate Professor<br>
+                Computer Science Department
+            </p>
+            <button onclick="showDetails('sheetal')">
+                View Details
+            </button>
+
         </div>
-        <div class="card">
+
+
+        <!-- Faculty 5 -->
+
+        <div class="card faculty-card">
+
             <img src="images/faculty.svg" alt="Faculty member">
-            <h3>Dr. Sameer Khan</h3>
-            <p>Assistant Professor<br>Electrical Department</p>
+
+            <h3>Dr. Neeraj Dubey</h3>
+
+            <p>
+                Assistant Professor<br>
+                Computer Science Department
+            </p>
+
+            <button onclick="showDetails('neeraj')">
+                View Details
+            </button>
+
         </div>
+
+    </div>
+
+</section>
+
+
+<!-- Faculty Details -->
+
+<section class="section faculty-details" id="faculty-details">
+    <h2>Faculty Details</h2>
+    <div id="details-content">
+        <p>
+            Click the <b>View Details</b> button on a faculty member
+            to see more information.
+        </p>
     </div>
 </section>
+
 </main>
+
 <footer>
-    <p>&copy; 2026 Govt. College of Engineering & Technology, Jammu. All Rights Reserved.</p>
-    <p>Email: info@gcetj.edu | Phone: +91 12345 67890</p>
+    <p>
+        &copy; 2026 Govt. College of Engineering & Technology, Jammu.
+        All Rights Reserved.
+    </p>
+    <p>
+        Email: info@gcetj.edu | Phone: +91 12345 67890
+    </p>
 </footer>
+
+
+<script>
+
+function showDetails(faculty) {
+
+    let details = "";
+
+    if (faculty === "simi") {
+
+        details = `
+            <h3>Dr. Simi Dutta</h3>
+            <p><b>Designation:</b> Professor & Head</p>
+            <p><b>Department:</b> Computer Science</p>
+            <p><b>Qualification:</b> Ph.D. in Computer Science & Information Technology</p>
+            <p><b>Email:</b> simmi.dutta@gcetjammu.org.in</p>
+        `;
+
+    }
+
+    else if (faculty === "bhawna") {
+
+        details = `
+            <h3>Dr. Bhawna Sharma</h3>
+            <p><b>Designation:</b> Professor</p>
+            <p><b>Department:</b> Computer Science</p>
+            <p><b>Qualification:</b> Ph.D. in Computer Science & Information Technology</p>
+            <p><b>Email:</b> bhawnash@gmail.com</p>
+        `;
+
+    }
+
+    else if (faculty === "jyoti") {
+
+        details = `
+            <h3>Dr. Jyoti Kumar Mahajan</h3>
+            <p><b>Designation:</b> Professor</p>
+            <p><b>Department:</b> Computer Science</p>
+            <p><b>Qualification:</b> Not Found/p>
+            <p><b>Email:</b> jyotimahajan@gcetjammu.org.in</p>
+        `;
+
+    }
+
+    else if (faculty === "sheetal") {
+
+        details = `
+            <h3>Ms. Sheetal Gandotra </h3>
+            <p><b>Designation:</b> Associate Professor</p>
+            <p><b>Department:</b> Computer Science</p>
+            <p><b>Qualification:</b> M.Tech. Computer Sc. & Engg. </p>
+            <p><b>Email:</b> sheetalgandotra74@gmail.com</p>
+        `;
+
+    }
+
+    else if (faculty === "neeraj") {
+
+        details = `
+            <h3>Mr. Neeraj Dubey</h3>
+            <p><b>Designation:</b> Assistant Professor</p>
+            <p><b>Department:</b> Computer Science</p>
+            <p><b>Qualification:</b> Not Found</p>
+            <p><b>Email:</b> singneeraj@rediffmail.com</p>
+        `;
+
+    }
+    document.getElementById("details-content").innerHTML = details;
+    document.getElementById("faculty-details").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+</script>
 </body>
 </html>
