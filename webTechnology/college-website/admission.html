@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admission Form - GCET, Jammu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/admission.css" />
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container brand">
+        <img src="images/logo.svg" alt="GCET Jammu logo" class="logo" />
+        <div>
+          <p class="brand-name">
+            Govt. College of Engineering &amp; Technology, Jammu
+          </p>
+          <p class="brand-tag">Knowledge &bull; Innovation &bull; Excellence</p>
+        </div>
+      </div>
+    </header>
+    <nav class="site-nav" aria-label="Main">
+      <div class="container nav-inner">
+        <button
+          class="icon-btn menu-btn"
+          id="menu-btn"
+          aria-expanded="false"
+          aria-controls="nav-list"
+        >
+          &#9776; Menu
+        </button>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faculty.html">Faculty</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="gallery.html">Photo Gallery</a></li>
+          <li>
+            <a href="admission.html" aria-current="page">Admission Form</a>
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <a class="login-btn" href="login.html"
+            ><img src="assets/icons/log-in.svg" alt="" />Student Login</a
+          >
+          <button
+            class="icon-btn"
+            id="theme-toggle"
+            aria-label="Switch theme"
+          ></button>
+        </div>
+      </div>
+    </nav>
+    <main class="container" id="main">
+      <div class="page-head">
+        <h1>Student Admission Form</h1>
+        <p>Fill in your details to apply.</p>
+      </div>
+      <div class="admission-layout">
+        <section class="section" style="margin-top: 28px">
+          <form id="admission-form">
+            <div class="form-grid">
+              <div>
+                <label for="name">Full name</label
+                ><input
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div>
+                <label for="dob">Date of birth</label
+                ><input type="date" id="dob" name="dob" required />
+              </div>
+              <div>
+                <label for="email">Email</label
+                ><input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+              <div>
+                <label for="mobile">Mobile number</label
+                ><input
+                  type="tel"
+                  id="mobile"
+                  name="mobile"
+                  pattern="[0-9]{10}"
+                  title="Enter a 10-digit mobile number"
+                  placeholder="10-digit number"
+                  required
+                />
+              </div>
+              <fieldset class="full">
+                <legend>Gender</legend>
+                <div class="choices">
+                  <label class="choice"
+                    ><input type="radio" name="gender" value="Male" required />
+                    Male</label
+                  >
+                  <label class="choice"
+                    ><input type="radio" name="gender" value="Female" />
+                    Female</label
+                  >
+                  <label class="choice"
+                    ><input type="radio" name="gender" value="Other" />
+                    Other</label
+                  >
+                </div>
+              </fieldset>
+              <div class="full">
+                <label for="course">Course</label
+                ><select id="course" name="course" required>
+                  <option value="">Select a course</option>
+                  <option>Computer Science Engineering</option>
+                  <option>Electronics Engineering</option>
+                  <option>Mechanical Engineering</option>
+                  <option>Civil Engineering</option>
+                  <option>Electrical Engineering</option>
+                </select>
+              </div>
+              <fieldset class="full">
+                <legend>Hobbies</legend>
+                <div class="choices">
+                  <label class="choice"
+                    ><input type="checkbox" name="hobbies" value="Reading" />
+                    Reading</label
+                  ><label class="choice"
+                    ><input type="checkbox" name="hobbies" value="Sports" />
+                    Sports</label
+                  ><label class="choice"
+                    ><input type="checkbox" name="hobbies" value="Music" />
+                    Music</label
+                  ><label class="choice"
+                    ><input type="checkbox" name="hobbies" value="Coding" />
+                    Coding</label
+                  ><label class="choice"
+                    ><input type="checkbox" name="hobbies" value="Art" />
+                    Art</label
+                  >
+                </div>
+              </fieldset>
+              <div class="full">
+                <label for="address">Address</label
+                ><textarea
+                  id="address"
+                  name="address"
+                  placeholder="Enter your address"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <div class="btn-row" style="margin-top: 22px">
+              <button class="btn" type="submit">Submit</button
+              ><button class="btn btn-outline" type="reset">Reset</button>
+            </div>
+          </form>
+          <div class="success" id="form-success" hidden>
+            <h2>Application received</h2>
+            <p>
+              <strong id="ok-name"></strong>, your application for
+              <strong id="ok-course"></strong> has been submitted.
+            </p>
+            <button class="btn" id="again">Fill another form</button>
+          </div>
+        </section>
+        <aside class="side-note" style="margin-top: 28px">
+          <h3>Before you apply</h3>
+          <ul>
+            <li>Use your own email and mobile number.</li>
+            <li>Keep your marksheets ready.</li>
+            <li>Check that all details are correct.</li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>GCET, Jammu</h3>
+            <p>
+              Quality technical education, practical learning and overall
+              student development.
+            </p>
+          </div>
+          <div>
+            <h3>Quick links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="faculty.html">Faculty</a></li>
+              <li><a href="students.html">Students</a></li>
+              <li><a href="gallery.html">Photo Gallery</a></li>
+              <li><a href="admission.html">Admission Form</a></li>
+              <li><a href="login.html">Student Login</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <p>Email: info@gcetj.edu<br />Phone: +91 12345 67890</p>
+          </div>
+        </div>
+        <p class="footer-bottom">
+          &copy; 2026 Govt. College of Engineering &amp; Technology, Jammu. All
+          Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

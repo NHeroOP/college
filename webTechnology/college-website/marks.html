@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marks - GCET Student Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/portal-base.css" />
+    <link rel="stylesheet" href="css/portal.css" />
+    <script src="js/portal.js"></script>
+  </head>
+  <body class="portal">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="i-grid" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="7" height="7" />
+        <rect x="14" y="3" width="7" height="7" />
+        <rect x="14" y="14" width="7" height="7" />
+        <rect x="3" y="14" width="7" height="7" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <polyline points="9 11 12 14 22 4" />
+        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+      </symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24">
+        <line x1="18" y1="20" x2="18" y2="10" />
+        <line x1="12" y1="20" x2="12" y2="4" />
+        <line x1="6" y1="20" x2="6" y2="14" />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+      </symbol>
+      <symbol id="i-card" viewBox="0 0 24 24">
+        <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+        <line x1="1" y1="10" x2="23" y2="10" />
+      </symbol>
+      <symbol id="i-out" viewBox="0 0 24 24">
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+        <polyline points="16 17 21 12 16 7" />
+        <line x1="21" y1="12" x2="9" y2="12" />
+      </symbol>
+      <symbol id="i-back" viewBox="0 0 24 24">
+        <line x1="19" y1="12" x2="5" y2="12" />
+        <polyline points="12 19 5 12 12 5" />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5" />
+        <line x1="12" y1="1" x2="12" y2="3" />
+        <line x1="12" y1="21" x2="12" y2="23" />
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+        <line x1="1" y1="12" x2="3" y2="12" />
+        <line x1="21" y1="12" x2="23" y2="12" />
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+      </symbol>
+    </svg>
+    <div class="shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="index.html"
+          ><img src="images/logo.svg" alt="" /><span
+            ><b>GCET Jammu</b><small>Student Portal</small></span
+          ></a
+        >
+        <p class="side-label">Menu</p>
+        <nav class="side-nav" aria-label="Portal">
+          <a class="side-link" href="dashboard.html"
+            ><svg class="ico" aria-hidden="true"><use href="#i-grid" /></svg
+            >Overview</a
+          ><a class="side-link" href="attendance.html"
+            ><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg
+            >Attendance</a
+          ><a class="side-link" href="marks.html" aria-current="page"
+            ><svg class="ico" aria-hidden="true"><use href="#i-chart" /></svg
+            >Marks</a
+          ><a class="side-link" href="timetable.html"
+            ><svg class="ico" aria-hidden="true"><use href="#i-clock" /></svg
+            >Timetable</a
+          ><a class="side-link" href="fees.html"
+            ><svg class="ico" aria-hidden="true"><use href="#i-card" /></svg
+            >Fees</a
+          >
+        </nav>
+        <div class="side-bottom">
+          <a class="side-link" href="index.html"
+            ><svg class="ico" aria-hidden="true"><use href="#i-back" /></svg
+            >Back to website</a
+          >
+          <a class="side-link" href="login.html"
+            ><svg class="ico" aria-hidden="true"><use href="#i-out" /></svg>Log
+            out</a
+          >
+        </div>
+      </aside>
+      <div class="scrim" id="scrim"></div>
+      <div class="main">
+        <header class="topbar">
+          <button
+            class="icon-btn"
+            id="menu-btn"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <svg class="ico" aria-hidden="true"><use href="#i-menu" /></svg>
+          </button>
+          <div class="crumbs">Student Portal<span>/</span><b>Marks</b></div>
+          <div class="top-right">
+            <button
+              class="icon-btn"
+              id="theme-toggle"
+              type="button"
+              aria-label="Switch light or dark theme"
+            >
+              <svg class="ico i-moon" aria-hidden="true">
+                <use href="#i-moon" /></svg
+              ><svg class="ico i-sun" aria-hidden="true">
+                <use href="#i-sun" />
+              </svg>
+            </button>
+            <div class="user">
+              <span class="avatar" aria-hidden="true">AS</span
+              ><span class="user-text"
+                ><b>Aarav Sharma</b><small>CSE-24-001</small></span
+              >
+            </div>
+          </div>
+        </header>
+        <main class="content" id="main">
+          <div class="page-head">
+            <div>
+              <h1>Marks</h1>
+              <p>Internal assessment and semester results</p>
+            </div>
+          </div>
+          <div class="kpis">
+            <div class="kpi">
+              <span>Internal total</span><b>251/300</b
+              ><small>Semester 3 so far</small>
+            </div>
+            <div class="kpi">
+              <span>Average</span><b>83.7%</b><small>Across 6 subjects</small>
+            </div>
+            <div class="kpi">
+              <span>Highest</span><b>47/50</b
+              ><small>Object Oriented Programming</small>
+            </div>
+            <div class="kpi">
+              <span>CGPA</span><b>8.25</b><small>After 2 semesters</small>
+            </div>
+          </div>
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Internal marks</h2>
+              <span>Semester 3</span>
+            </div>
+            <div class="table-scroll">
+              <table class="tbl">
+                <thead>
+                  <tr>
+                    <th>Subject</th>
+                    <th class="num">Internal 1 <small>/20</small></th>
+                    <th class="num">Internal 2 <small>/20</small></th>
+                    <th class="num">Assignment <small>/10</small></th>
+                    <th class="num">Total <small>/50</small></th>
+                    <th class="num">%</th>
+                    <th>Grade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Data Structures<small>CS301</small></td>
+                    <td class="num">17</td>
+                    <td class="num">18</td>
+                    <td class="num">9</td>
+                    <td class="num"><strong>44</strong></td>
+                    <td class="num">88%</td>
+                    <td>A</td>
+                  </tr>
+                  <tr>
+                    <td>Discrete Mathematics<small>MA302</small></td>
+                    <td class="num">14</td>
+                    <td class="num">15</td>
+                    <td class="num">8</td>
+                    <td class="num"><strong>37</strong></td>
+                    <td class="num">74%</td>
+                    <td>B+</td>
+                  </tr>
+                  <tr>
+                    <td>Digital Electronics<small>EC303</small></td>
+                    <td class="num">16</td>
+                    <td class="num">13</td>
+                    <td class="num">9</td>
+                    <td class="num"><strong>38</strong></td>
+                    <td class="num">76%</td>
+                    <td>B+</td>
+                  </tr>
+                  <tr>
+                    <td>Object Oriented Programming<small>CS304</small></td>
+                    <td class="num">18</td>
+                    <td class="num">19</td>
+                    <td class="num">10</td>
+                    <td class="num"><strong>47</strong></td>
+                    <td class="num">94%</td>
+                    <td>A+</td>
+                  </tr>
+                  <tr>
+                    <td>Computer Organization<small>CS305</small></td>
+                    <td class="num">15</td>
+                    <td class="num">16</td>
+                    <td class="num">7</td>
+                    <td class="num"><strong>38</strong></td>
+                    <td class="num">76%</td>
+                    <td>B+</td>
+                  </tr>
+                  <tr>
+                    <td>Data Structures Lab<small>CS306</small></td>
+                    <td class="num">19</td>
+                    <td class="num">18</td>
+                    <td class="num">10</td>
+                    <td class="num"><strong>47</strong></td>
+                    <td class="num">94%</td>
+                    <td>A+</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>Total</td>
+                    <td class="num"></td>
+                    <td class="num"></td>
+                    <td class="num"></td>
+                    <td class="num">251/300</td>
+                    <td class="num">83.7%</td>
+                    <td></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </section>
+          <div class="cols even">
+            <section class="panel">
+              <div class="panel-head"><h2>Semester results</h2></div>
+              <div class="table-scroll">
+                <table class="tbl">
+                  <thead>
+                    <tr>
+                      <th>Semester</th>
+                      <th class="num">Credits</th>
+                      <th class="num">SGPA</th>
+                      <th>Result</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Semester 1</td>
+                      <td class="num">22</td>
+                      <td class="num">8.1</td>
+                      <td><span class="st ok">Passed</span></td>
+                    </tr>
+                    <tr>
+                      <td>Semester 2</td>
+                      <td class="num">23</td>
+                      <td class="num">8.4</td>
+                      <td><span class="st ok">Passed</span></td>
+                    </tr>
+                    <tr>
+                      <td>Semester 3</td>
+                      <td class="num">24</td>
+                      <td class="num">&ndash;</td>
+                      <td><span class="st idle">In progress</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section class="panel">
+              <div class="panel-head">
+                <h2>SGPA trend</h2>
+                <span>Out of 10</span>
+              </div>
+              <div class="chart-wrap">
+                <div class="plot" style="--n: 3">
+                  <div class="plot-bar" style="--h: 81%"><b>8.1</b></div>
+                  <div class="plot-bar" style="--h: 84%"><b>8.4</b></div>
+                  <div class="plot-bar empty"><b>&ndash;</b></div>
+                </div>
+                <div class="plot-labels" style="--n: 3">
+                  <span>Sem 1</span><span>Sem 2</span><span>Sem 3</span>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

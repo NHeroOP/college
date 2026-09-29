@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in - GCET Student Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/portal-base.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <script src="js/portal.js"></script>
+  </head>
+  <body class="portal login-page">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="i-grid" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="7" height="7" />
+        <rect x="14" y="3" width="7" height="7" />
+        <rect x="14" y="14" width="7" height="7" />
+        <rect x="3" y="14" width="7" height="7" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <polyline points="9 11 12 14 22 4" />
+        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+      </symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24">
+        <line x1="18" y1="20" x2="18" y2="10" />
+        <line x1="12" y1="20" x2="12" y2="4" />
+        <line x1="6" y1="20" x2="6" y2="14" />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+      </symbol>
+      <symbol id="i-card" viewBox="0 0 24 24">
+        <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+        <line x1="1" y1="10" x2="23" y2="10" />
+      </symbol>
+      <symbol id="i-out" viewBox="0 0 24 24">
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+        <polyline points="16 17 21 12 16 7" />
+        <line x1="21" y1="12" x2="9" y2="12" />
+      </symbol>
+      <symbol id="i-back" viewBox="0 0 24 24">
+        <line x1="19" y1="12" x2="5" y2="12" />
+        <polyline points="12 19 5 12 12 5" />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5" />
+        <line x1="12" y1="1" x2="12" y2="3" />
+        <line x1="12" y1="21" x2="12" y2="23" />
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+        <line x1="1" y1="12" x2="3" y2="12" />
+        <line x1="21" y1="12" x2="23" y2="12" />
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+      </symbol>
+    </svg>
+    <aside class="login-side">
+      <img src="images/college3.png" alt="" />
+      <div class="login-brand">
+        <img src="images/logo.svg" alt="" /><span
+          >Govt. College of Engineering<br />&amp; Technology, Jammu</span
+        >
+      </div>
+      <div>
+        <h2>Student Portal</h2>
+        <p>Attendance, marks, timetable and fees in one place.</p>
+      </div>
+    </aside>
+    <main class="login-main" id="main">
+      <div class="login-top">
+        <a href="index.html"
+          ><svg class="ico" aria-hidden="true"><use href="#i-back" /></svg>Back
+          to website</a
+        ><button
+          class="icon-btn"
+          id="theme-toggle"
+          type="button"
+          aria-label="Switch light or dark theme"
+        >
+          <svg class="ico i-moon" aria-hidden="true"><use href="#i-moon" /></svg
+          ><svg class="ico i-sun" aria-hidden="true"><use href="#i-sun" /></svg>
+        </button>
+      </div>
+      <form class="login-card" action="dashboard.html" novalidate>
+        <h1>Sign in</h1>
+        <p class="sub">Enter your roll number and password to continue.</p>
+        <div class="field">
+          <label for="roll">Roll number</label
+          ><input
+            id="roll"
+            type="text"
+            placeholder="CSE-24-001"
+            autocomplete="off"
+          />
+        </div>
+        <div class="field">
+          <label for="pass">Password</label>
+          <div class="pass-wrap">
+            <input
+              id="pass"
+              type="password"
+              placeholder="Password"
+              autocomplete="off"
+            /><button class="show-btn" id="show-pass" type="button">
+              Show
+            </button>
+          </div>
+        </div>
+        <div class="login-row">
+          <label class="remember"><input type="checkbox" /> Remember me</label
+          ><a href="#">Forgot password?</a>
+        </div>
+        <button class="btn" type="submit">Sign in</button>
+        <p class="hint">Demo only. Any details will open the dashboard.</p>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendance - GCET Student Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/portal-base.css" />
+    <link rel="stylesheet" href="css/portal.css" />
+    <script src="js/portal.js"></script>
+  </head>
+  <body class="portal">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="i-grid" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="7" height="7" />
+        <rect x="14" y="3" width="7" height="7" />
+        <rect x="14" y="14" width="7" height="7" />
+        <rect x="3" y="14" width="7" height="7" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <polyline points="9 11 12 14 22 4" />
+        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+      </symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24">
+        <line x1="18" y1="20" x2="18" y2="10" />
+        <line x1="12" y1="20" x2="12" y2="4" />
+        <line x1="6" y1="20" x2="6" y2="14" />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+      </symbol>
+      <symbol id="i-card" viewBox="0 0 24 24">
+        <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+        <line x1="1" y1="10" x2="23" y2="10" />
+      </symbol>
+      <symbol id="i-out" viewBox="0 0 24 24">
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+        <polyline points="16 17 21 12 16 7" />
+        <line x1="21" y1="12" x2="9" y2="12" />
+      </symbol>
+      <symbol id="i-back" viewBox="0 0 24 24">
+        <line x1="19" y1="12" x2="5" y2="12" />
+        <polyline points="12 19 5 12 12 5" />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5" />
+        <line x1="12" y1="1" x2="12" y2="3" />
+        <line x1="12" y1="21" x2="12" y2="23" />
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+        <line x1="1" y1="12" x2="3" y2="12" />
+        <line x1="21" y1="12" x2="23" y2="12" />
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+      </symbol>
+    </svg>
+    <div class="shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="index.html"
+          ><img src="images/logo.svg" alt="" /><span
+            ><b>GCET Jammu</b><small>Student Portal</small></span
+          ></a
+        >
+        <p class="side-label">Menu</p>
+        <nav class="side-nav" aria-label="Portal">
+          <a class="side-link" href="dashboard.html"
+            ><svg class="ico" aria-hidden="true"><use href="#i-grid" /></svg
+            >Overview</a
+          ><a class="side-link" href="attendance.html" aria-current="page"
+            ><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg
+            >Attendance</a
+          ><a class="side-link" href="marks.html"
+            ><svg class="ico" aria-hidden="true"><use href="#i-chart" /></svg
+            >Marks</a
+          ><a class="side-link" href="timetable.html"
+            ><svg class="ico" aria-hidden="true"><use href="#i-clock" /></svg
+            >Timetable</a
+          ><a class="side-link" href="fees.html"
+            ><svg class="ico" aria-hidden="true"><use href="#i-card" /></svg
+            >Fees</a
+          >
+        </nav>
+        <div class="side-bottom">
+          <a class="side-link" href="index.html"
+            ><svg class="ico" aria-hidden="true"><use href="#i-back" /></svg
+            >Back to website</a
+          >
+          <a class="side-link" href="login.html"
+            ><svg class="ico" aria-hidden="true"><use href="#i-out" /></svg>Log
+            out</a
+          >
+        </div>
+      </aside>
+      <div class="scrim" id="scrim"></div>
+      <div class="main">
+        <header class="topbar">
+          <button
+            class="icon-btn"
+            id="menu-btn"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <svg class="ico" aria-hidden="true"><use href="#i-menu" /></svg>
+          </button>
+          <div class="crumbs">
+            Student Portal<span>/</span><b>Attendance</b>
+          </div>
+          <div class="top-right">
+            <button
+              class="icon-btn"
+              id="theme-toggle"
+              type="button"
+              aria-label="Switch light or dark theme"
+            >
+              <svg class="ico i-moon" aria-hidden="true">
+                <use href="#i-moon" /></svg
+              ><svg class="ico i-sun" aria-hidden="true">
+                <use href="#i-sun" />
+              </svg>
+            </button>
+            <div class="user">
+              <span class="avatar" aria-hidden="true">AS</span
+              ><span class="user-text"
+                ><b>Aarav Sharma</b><small>CSE-24-001</small></span
+              >
+            </div>
+          </div>
+        </header>
+        <main class="content" id="main">
+          <div class="page-head">
+            <div>
+              <h1>Attendance</h1>
+              <p>Class attendance for the current semester</p>
+            </div>
+          </div>
+          <div class="kpis">
+            <div class="kpi">
+              <span>Overall attendance</span><b>83%</b
+              ><small>Minimum required: 75%</small>
+            </div>
+            <div class="kpi">
+              <span>Classes held</span><b>210</b><small>Since 15 July</small>
+            </div>
+            <div class="kpi">
+              <span>Attended</span><b>174</b><small>Present</small>
+            </div>
+            <div class="kpi">
+              <span>Absent</span><b>36</b><small>Classes missed</small>
+            </div>
+          </div>
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Subject-wise attendance</h2>
+              <span>Semester 3</span>
+            </div>
+            <div class="table-scroll">
+              <table class="tbl">
+                <thead>
+                  <tr>
+                    <th>Subject</th>
+                    <th class="num">Held</th>
+                    <th class="num">Attended</th>
+                    <th class="num">%</th>
+                    <th style="width: 160px">Progress</th>
+                    <th>Status</th>
+                    <th>Buffer at 75%</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Data Structures<small
+                        >CS301 &middot; Dr. Simi Dutta</small
+                      >
+                    </td>
+                    <td class="num">40</td>
+                    <td class="num">36</td>
+                    <td class="num">90%</td>
+                    <td>
+                      <div class="bar" role="img" aria-label="90 percent">
+                        <span style="--w: 90%"></span>
+                      </div>
+                    </td>
+                    <td><span class="st ok">On track</span></td>
+                    <td>Can miss 8</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Discrete Mathematics<small
+                        >MA302 &middot; Dr. Bhawna Sharma</small
+                      >
+                    </td>
+                    <td class="num">38</td>
+                    <td class="num">29</td>
+                    <td class="num">76%</td>
+                    <td>
+                      <div class="bar warn" role="img" aria-label="76 percent">
+                        <span style="--w: 76%"></span>
+                      </div>
+                    </td>
+                    <td><span class="st warn">Near limit</span></td>
+                    <td>No buffer</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Digital Electronics<small
+                        >EC303 &middot; Dr. Neeraj Dubey</small
+                      >
+                    </td>
+                    <td class="num">36</td>
+                    <td class="num">27</td>
+                    <td class="num">75%</td>
+                    <td>
+                      <div class="bar warn" role="img" aria-label="75 percent">
+                        <span style="--w: 75%"></span>
+                      </div>
+                    </td>
+                    <td><span class="st warn">Near limit</span></td>
+                    <td>No buffer</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Object Oriented Programming<small
+                        >CS304 &middot; Dr. Jyoti Kumar Mahajan</small
+                      >
+                    </td>
+                    <td class="num">42</td>
+                    <td class="num">39</td>
+                    <td class="num">93%</td>
+                    <td>
+                      <div class="bar" role="img" aria-label="93 percent">
+                        <span style="--w: 93%"></span>
+                      </div>
+                    </td>
+                    <td><span class="st ok">On track</span></td>
+                    <td>Can miss 10</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Computer Organization<small
+                        >CS305 &middot; Ms. Sheetal Gandotra</small
+                      >
+                    </td>
+                    <td class="num">34</td>
+                    <td class="num">24</td>
+                    <td class="num">71%</td>
+                    <td>
+                      <div class="bar bad" role="img" aria-label="71 percent">
+                        <span style="--w: 71%"></span>
+                      </div>
+                    </td>
+                    <td><span class="st bad">Low</span></td>
+                    <td>Attend next 6</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Data Structures Lab<small
+                        >CS306 &middot; Dr. Simi Dutta</small
+                      >
+                    </td>
+                    <td class="num">20</td>
+                    <td class="num">19</td>
+                    <td class="num">95%</td>
+                    <td>
+                      <div class="bar" role="img" aria-label="95 percent">
+                        <span style="--w: 95%"></span>
+                      </div>
+                    </td>
+                    <td><span class="st ok">On track</span></td>
+                    <td>Can miss 5</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="foot-note">
+              Buffer shows how many classes you can still miss, or how many in a
+              row you must attend, to stay at 75%.
+            </p>
+          </section>
+          <section class="panel">
+            <div class="panel-head"><h2>Monthly attendance</h2></div>
+            <div class="chart-wrap">
+              <div class="plot limit" style="--n: 3">
+                <div class="plot-bar" style="--h: 88%"><b>88%</b></div>
+                <div class="plot-bar" style="--h: 84%"><b>84%</b></div>
+                <div class="plot-bar" style="--h: 78%"><b>78%</b></div>
+                <span class="plot-limit">75% minimum</span>
+              </div>
+              <div class="plot-labels" style="--n: 3">
+                <span>July</span><span>August</span><span>September</span>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
