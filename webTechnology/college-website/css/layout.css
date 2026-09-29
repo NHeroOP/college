@@ -1,0 +1,291 @@
+/* layout.css - header, navbar, page wrappers, grids, footer. Loaded on every site page. */
+
+/* ----- header + navbar ----- */
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+}
+.logo {
+  width: 64px;
+  height: 64px;
+  padding: 4px;
+  background: #fff;
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  object-fit: contain;
+}
+.brand-name {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--heading);
+  line-height: 1.2;
+  margin: 0;
+}
+.brand-tag {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.site-nav {
+  background: var(--bar);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.nav-list a {
+  display: block;
+  padding: 14px 20px;
+  color: var(--bar-text);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.nav-list a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-bottom-color: var(--accent);
+}
+.nav-list a[aria-current="page"] {
+  border-bottom-color: var(--accent);
+}
+.icon-btn {
+  height: 42px;
+  min-width: 42px;
+  padding: 0 12px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: var(--bar-text);
+  font: 600 1rem var(--font-body);
+  cursor: pointer;
+}
+.icon-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+.icon-btn img {
+  width: 22px;
+  height: 22px;
+}
+.menu-btn {
+  display: none;
+}
+
+/* Student Login button in the navbar */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.login-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 18px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.login-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+.login-btn img {
+  width: 18px;
+  height: 18px;
+}
+.login-btn[aria-current="page"] {
+  box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.35);
+}
+
+/* ----- page wrappers and grids ----- */
+main {
+  padding: 32px 0 8px;
+}
+.page-head h1::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--accent);
+  margin-top: 12px;
+}
+.page-head p {
+  max-width: 65ch;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin-top: 28px;
+  box-shadow: var(--shadow);
+}
+.section > h2 {
+  text-align: center;
+}
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+} /* CSS Grid */
+.split img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+.grid-2,
+.grid-3,
+.grid-4 {
+  display: grid;
+  gap: 20px;
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ----- footer ----- */
+.site-footer {
+  margin-top: 48px;
+  padding-top: 40px;
+  background: var(--foot);
+  color: #f3dfe2;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.4fr;
+  gap: 32px;
+}
+.site-footer h3 {
+  color: #fff;
+  font-size: 1.1rem;
+}
+.site-footer a {
+  color: #f3dfe2;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer-bottom {
+  margin-top: 28px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  font-size: 0.92rem;
+}
+
+/* ----- responsive ----- */
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+  .grid-4,
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .nav-list a {
+    padding: 14px 12px;
+  }
+}
+@media (max-width: 600px) {
+  .brand-name {
+    font-size: 1.05rem;
+  }
+  .brand-tag {
+    display: none;
+  }
+  .logo {
+    width: 52px;
+    height: 52px;
+  }
+  .section {
+    padding: 20px;
+  }
+  .nav-inner {
+    flex-wrap: wrap;
+    padding: 8px 0;
+  }
+  .menu-btn {
+    display: grid;
+  }
+  .nav-actions {
+    margin-left: auto;
+  }
+  .nav-list {
+    display: none;
+    flex: none;
+    width: 100%;
+    flex-direction: column;
+    order: 3;
+  }
+  .nav-list.open {
+    display: flex;
+  }
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

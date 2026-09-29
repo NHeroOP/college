@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery - GCET, Jammu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container brand">
+        <img src="images/logo.svg" alt="GCET Jammu logo" class="logo" />
+        <div>
+          <p class="brand-name">
+            Govt. College of Engineering &amp; Technology, Jammu
+          </p>
+          <p class="brand-tag">Knowledge &bull; Innovation &bull; Excellence</p>
+        </div>
+      </div>
+    </header>
+    <nav class="site-nav" aria-label="Main">
+      <div class="container nav-inner">
+        <button
+          class="icon-btn menu-btn"
+          id="menu-btn"
+          aria-expanded="false"
+          aria-controls="nav-list"
+        >
+          &#9776; Menu
+        </button>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faculty.html">Faculty</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="gallery.html" aria-current="page">Photo Gallery</a></li>
+          <li><a href="admission.html">Admission Form</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="login-btn" href="login.html"
+            ><img src="assets/icons/log-in.svg" alt="" />Student Login</a
+          >
+          <button
+            class="icon-btn"
+            id="theme-toggle"
+            aria-label="Switch theme"
+          ></button>
+        </div>
+      </div>
+    </nav>
+    <main class="container" id="main">
+      <div class="page-head">
+        <h1>Photo Gallery</h1>
+        <p>Some memorable places and activities of our college.</p>
+      </div>
+      <section class="section">
+        <div class="gallery">
+          <figure>
+            <img src="images/college.jpg" alt="College campus" />
+            <figcaption>College campus</figcaption>
+          </figure>
+          <figure>
+            <img src="images/college2.png" alt="Main building" />
+            <figcaption>Main building</figcaption>
+          </figure>
+          <figure>
+            <img src="images/college3.png" alt="Campus view" />
+            <figcaption>Campus view</figcaption>
+          </figure>
+          <figure>
+            <img src="images/library.jpg" alt="College library" />
+            <figcaption>College library</figcaption>
+          </figure>
+          <figure>
+            <img src="images/ground.jpg" alt="Sports ground" />
+            <figcaption>Sports ground</figcaption>
+          </figure>
+          <figure>
+            <img src="images/seminar.jpg" alt="Seminar hall" />
+            <figcaption>Seminar hall</figcaption>
+          </figure>
+          <figure>
+            <img src="images/college4.png" alt="Campus from above" />
+            <figcaption>Campus from above</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>GCET, Jammu</h3>
+            <p>
+              Quality technical education, practical learning and overall
+              student development.
+            </p>
+          </div>
+          <div>
+            <h3>Quick links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="faculty.html">Faculty</a></li>
+              <li><a href="students.html">Students</a></li>
+              <li><a href="gallery.html">Photo Gallery</a></li>
+              <li><a href="admission.html">Admission Form</a></li>
+              <li><a href="login.html">Student Login</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <p>Email: info@gcetj.edu<br />Phone: +91 12345 67890</p>
+          </div>
+        </div>
+        <p class="footer-bottom">
+          &copy; 2026 Govt. College of Engineering &amp; Technology, Jammu. All
+          Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

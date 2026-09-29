@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students - GCET, Jammu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/students.css" />
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container brand">
+        <img src="images/logo.svg" alt="GCET Jammu logo" class="logo" />
+        <div>
+          <p class="brand-name">
+            Govt. College of Engineering &amp; Technology, Jammu
+          </p>
+          <p class="brand-tag">Knowledge &bull; Innovation &bull; Excellence</p>
+        </div>
+      </div>
+    </header>
+    <nav class="site-nav" aria-label="Main">
+      <div class="container nav-inner">
+        <button
+          class="icon-btn menu-btn"
+          id="menu-btn"
+          aria-expanded="false"
+          aria-controls="nav-list"
+        >
+          &#9776; Menu
+        </button>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faculty.html">Faculty</a></li>
+          <li><a href="students.html" aria-current="page">Students</a></li>
+          <li><a href="gallery.html">Photo Gallery</a></li>
+          <li><a href="admission.html">Admission Form</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="login-btn" href="login.html"
+            ><img src="assets/icons/log-in.svg" alt="" />Student Login</a
+          >
+          <button
+            class="icon-btn"
+            id="theme-toggle"
+            aria-label="Switch theme"
+          ></button>
+        </div>
+      </div>
+    </nav>
+    <main class="container" id="main">
+      <div class="page-head">
+        <h1>Student Corner</h1>
+        <p>Notices, downloads, events and support in one place.</p>
+      </div>
+      <section class="section">
+        <h2>Quick links</h2>
+        <div class="grid-4">
+          <a class="tile" href="login.html"
+            ><img class="tile-icon" src="assets/icons/file-text.svg" alt="" />
+            <h3>Results</h3>
+            <p>Check your examination results.</p></a
+          ><a class="tile" href="#"
+            ><img class="tile-icon" src="assets/icons/book-open.svg" alt="" />
+            <h3>Library</h3>
+            <p>Catalogue, timings and e-resources.</p></a
+          ><a class="tile" href="#"
+            ><img class="tile-icon" src="assets/icons/award.svg" alt="" />
+            <h3>Scholarships</h3>
+            <p>Schemes, eligibility and deadlines.</p></a
+          ><a class="tile" href="#"
+            ><img class="tile-icon" src="assets/icons/briefcase.svg" alt="" />
+            <h3>Placement cell</h3>
+            <p>Drives, training and career help.</p></a
+          >
+        </div>
+      </section>
+      <div class="two-col">
+        <section class="section align-left">
+          <h2>Latest notices</h2>
+          <div class="filters" role="group" aria-label="Filter notices">
+            <button class="filter" data-tag="All" aria-pressed="true">
+              All</button
+            ><button class="filter" data-tag="Exam" aria-pressed="false">
+              Exam</button
+            ><button class="filter" data-tag="Academic" aria-pressed="false">
+              Academic</button
+            ><button class="filter" data-tag="Placement" aria-pressed="false">
+              Placement</button
+            ><button class="filter" data-tag="Scholarship" aria-pressed="false">
+              Scholarship
+            </button>
+          </div>
+          <ul class="notice-list">
+            <li class="notice" data-tag="Exam">
+              <time>28 Sep 2026</time>
+              <div>
+                <span class="tag">Exam</span>
+                <p>Mid-semester examination schedule released</p>
+              </div>
+            </li>
+            <li class="notice" data-tag="Academic">
+              <time>25 Sep 2026</time>
+              <div>
+                <span class="tag">Academic</span>
+                <p>Timetable for Semesters 3 and 5 updated</p>
+              </div>
+            </li>
+            <li class="notice" data-tag="Placement">
+              <time>22 Sep 2026</time>
+              <div>
+                <span class="tag">Placement</span>
+                <p>Campus placement drive: registration is open</p>
+              </div>
+            </li>
+            <li class="notice" data-tag="Scholarship">
+              <time>18 Sep 2026</time>
+              <div>
+                <span class="tag">Scholarship</span>
+                <p>Last date to submit scholarship application forms</p>
+              </div>
+            </li>
+            <li class="notice" data-tag="Academic">
+              <time>12 Sep 2026</time>
+              <div>
+                <span class="tag">Academic</span>
+                <p>Attendance shortage list displayed on the notice board</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="section align-left">
+          <h2>Upcoming events</h2>
+          <ul class="event-list">
+            <li class="event">
+              <div class="date-badge"><b>10</b><span>Oct</span></div>
+              <div>
+                <h3>Technical fest</h3>
+                <p>Hackathon and project exhibition</p>
+              </div>
+            </li>
+            <li class="event">
+              <div class="date-badge"><b>24</b><span>Oct</span></div>
+              <div>
+                <h3>Guest lecture on AI and careers</h3>
+                <p>Seminar hall</p>
+              </div>
+            </li>
+            <li class="event">
+              <div class="date-badge"><b>06</b><span>Nov</span></div>
+              <div>
+                <h3>Inter-college sports meet</h3>
+                <p>College ground</p>
+              </div>
+            </li>
+            <li class="event">
+              <div class="date-badge"><b>20</b><span>Nov</span></div>
+              <div>
+                <h3>Cultural evening</h3>
+                <p>Music, dance and drama</p>
+              </div>
+            </li>
+            <li class="event">
+              <div class="date-badge"><b>05</b><span>Dec</span></div>
+              <div>
+                <h3>Placement training workshop</h3>
+                <p>Aptitude and interview practice</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <section class="section">
+        <h2>Downloads</h2>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Resource</th>
+                <th>Category</th>
+                <th>Format</th>
+                <th>Size</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Resource">
+                  Syllabus: B.Tech Computer Science (all semesters)
+                </td>
+                <td data-label="Category">Syllabus</td>
+                <td data-label="Format"><span class="file-type">PDF</span></td>
+                <td data-label="Size">2.4 MB</td>
+                <td data-label="Action">
+                  <a class="btn btn-outline" href="#">Download</a>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Resource">Timetable: Semester 3</td>
+                <td data-label="Category">Timetable</td>
+                <td data-label="Format"><span class="file-type">PDF</span></td>
+                <td data-label="Size">320 KB</td>
+                <td data-label="Action">
+                  <a class="btn btn-outline" href="#">Download</a>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Resource">Academic calendar 2026-27</td>
+                <td data-label="Category">Calendar</td>
+                <td data-label="Format"><span class="file-type">PDF</span></td>
+                <td data-label="Size">180 KB</td>
+                <td data-label="Action">
+                  <a class="btn btn-outline" href="#">Download</a>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Resource">Mid-semester exam schedule</td>
+                <td data-label="Category">Exams</td>
+                <td data-label="Format"><span class="file-type">PDF</span></td>
+                <td data-label="Size">210 KB</td>
+                <td data-label="Action">
+                  <a class="btn btn-outline" href="#">Download</a>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Resource">Scholarship application form</td>
+                <td data-label="Category">Forms</td>
+                <td data-label="Format"><span class="file-type">PDF</span></td>
+                <td data-label="Size">450 KB</td>
+                <td data-label="Action">
+                  <a class="btn btn-outline" href="#">Download</a>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Resource">Bonafide certificate request form</td>
+                <td data-label="Category">Forms</td>
+                <td data-label="Format"><span class="file-type">DOCX</span></td>
+                <td data-label="Size">60 KB</td>
+                <td data-label="Action">
+                  <a class="btn btn-outline" href="#">Download</a>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Resource">Previous year question papers</td>
+                <td data-label="Category">Exams</td>
+                <td data-label="Format"><span class="file-type">ZIP</span></td>
+                <td data-label="Size">8.6 MB</td>
+                <td data-label="Action">
+                  <a class="btn btn-outline" href="#">Download</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="sample-note">
+          Sample entries. Replace the # links with your real files.
+        </p>
+      </section>
+      <section class="section">
+        <h2>Clubs and activities</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Coding Club</h3>
+            <p>Weekly practice, contests and hackathons.</p>
+          </div>
+          <div class="card">
+            <h3>Robotics Club</h3>
+            <p>Build and test robots and embedded projects.</p>
+          </div>
+          <div class="card">
+            <h3>Cultural Society</h3>
+            <p>Music, dance, drama and annual fest events.</p>
+          </div>
+          <div class="card">
+            <h3>Sports Committee</h3>
+            <p>Cricket, football, athletics and inter-college meets.</p>
+          </div>
+          <div class="card">
+            <h3>NSS</h3>
+            <p>Community service, cleanliness drives and camps.</p>
+          </div>
+          <div class="card">
+            <h3>Student Council</h3>
+            <p>Your voice to the college administration.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <h2>Student representatives</h2>
+        <p style="text-align: center">
+          Class representatives you can approach for help with notices, events
+          and academic questions.
+        </p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Roll Number</th>
+                <th>Branch</th>
+                <th>Semester</th>
+                <th>Section</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Name">Aarav Sharma</td>
+                <td data-label="Roll Number">CSE-24-001</td>
+                <td data-label="Branch">Computer Science</td>
+                <td data-label="Semester">3</td>
+                <td data-label="Section">A</td>
+              </tr>
+              <tr>
+                <td data-label="Name">Ananya Gupta</td>
+                <td data-label="Roll Number">CSE-24-014</td>
+                <td data-label="Branch">Computer Science</td>
+                <td data-label="Semester">3</td>
+                <td data-label="Section">A</td>
+              </tr>
+              <tr>
+                <td data-label="Name">Rohan Verma</td>
+                <td data-label="Roll Number">ECE-24-007</td>
+                <td data-label="Branch">Electronics</td>
+                <td data-label="Semester">3</td>
+                <td data-label="Section">B</td>
+              </tr>
+              <tr>
+                <td data-label="Name">Simran Kour</td>
+                <td data-label="Roll Number">ME-24-022</td>
+                <td data-label="Branch">Mechanical</td>
+                <td data-label="Semester">3</td>
+                <td data-label="Section">A</td>
+              </tr>
+              <tr>
+                <td data-label="Name">Karan Mehta</td>
+                <td data-label="Roll Number">CE-24-011</td>
+                <td data-label="Branch">Civil</td>
+                <td data-label="Semester">3</td>
+                <td data-label="Section">B</td>
+              </tr>
+              <tr>
+                <td data-label="Name">Priya Sethi</td>
+                <td data-label="Roll Number">EE-24-005</td>
+                <td data-label="Branch">Electrical</td>
+                <td data-label="Semester">3</td>
+                <td data-label="Section">A</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>GCET, Jammu</h3>
+            <p>
+              Quality technical education, practical learning and overall
+              student development.
+            </p>
+          </div>
+          <div>
+            <h3>Quick links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="faculty.html">Faculty</a></li>
+              <li><a href="students.html">Students</a></li>
+              <li><a href="gallery.html">Photo Gallery</a></li>
+              <li><a href="admission.html">Admission Form</a></li>
+              <li><a href="login.html">Student Login</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <p>Email: info@gcetj.edu<br />Phone: +91 12345 67890</p>
+          </div>
+        </div>
+        <p class="footer-bottom">
+          &copy; 2026 Govt. College of Engineering &amp; Technology, Jammu. All
+          Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

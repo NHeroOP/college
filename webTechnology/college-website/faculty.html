@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faculty - GCET, Jammu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container brand">
+        <img src="images/logo.svg" alt="GCET Jammu logo" class="logo" />
+        <div>
+          <p class="brand-name">
+            Govt. College of Engineering &amp; Technology, Jammu
+          </p>
+          <p class="brand-tag">Knowledge &bull; Innovation &bull; Excellence</p>
+        </div>
+      </div>
+    </header>
+    <nav class="site-nav" aria-label="Main">
+      <div class="container nav-inner">
+        <button
+          class="icon-btn menu-btn"
+          id="menu-btn"
+          aria-expanded="false"
+          aria-controls="nav-list"
+        >
+          &#9776; Menu
+        </button>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faculty.html" aria-current="page">Faculty</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="gallery.html">Photo Gallery</a></li>
+          <li><a href="admission.html">Admission Form</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="login-btn" href="login.html"
+            ><img src="assets/icons/log-in.svg" alt="" />Student Login</a
+          >
+          <button
+            class="icon-btn"
+            id="theme-toggle"
+            aria-label="Switch theme"
+          ></button>
+        </div>
+      </div>
+    </nav>
+    <main class="container" id="main">
+      <div class="page-head">
+        <h1>Our Faculty</h1>
+        <p>Experienced teachers of the Computer Science Department.</p>
+      </div>
+      <section class="section">
+        <div class="cards">
+          <article class="card faculty-card">
+            <img src="images/faculty/faculty1.png" alt="Dr. Simi Dutta" />
+            <h3>Dr. Simi Dutta</h3>
+            <p class="role">Professor &amp; Head</p>
+            <p>Computer Science Department</p>
+            <button
+              class="btn view-details"
+              data-name="Dr. Simi Dutta"
+              data-role="Professor &amp; Head"
+              data-qual="Ph.D. in Computer Science &amp; Information Technology"
+              data-email="simmi.dutta@gcetjammu.org.in"
+            >
+              View details
+            </button>
+          </article>
+          <article class="card faculty-card">
+            <img src="images/faculty/faculty2.png" alt="Dr. Bhawna Sharma" />
+            <h3>Dr. Bhawna Sharma</h3>
+            <p class="role">Professor</p>
+            <p>Computer Science Department</p>
+            <button
+              class="btn view-details"
+              data-name="Dr. Bhawna Sharma"
+              data-role="Professor"
+              data-qual="Ph.D. in Computer Science &amp; Information Technology"
+              data-email="bhawnash@gmail.com"
+            >
+              View details
+            </button>
+          </article>
+          <article class="card faculty-card">
+            <img
+              src="images/faculty/faculty3.png"
+              alt="Dr. Jyoti Kumar Mahajan"
+            />
+            <h3>Dr. Jyoti Kumar Mahajan</h3>
+            <p class="role">Assistant Professor</p>
+            <p>Computer Science Department</p>
+            <button
+              class="btn view-details"
+              data-name="Dr. Jyoti Kumar Mahajan"
+              data-role="Assistant Professor"
+              data-qual="Not available"
+              data-email="jyotimahajan@gcetjammu.org.in"
+            >
+              View details
+            </button>
+          </article>
+          <article class="card faculty-card">
+            <img src="images/faculty/faculty4.png" alt="Ms. Sheetal Gandotra" />
+            <h3>Ms. Sheetal Gandotra</h3>
+            <p class="role">Associate Professor</p>
+            <p>Computer Science Department</p>
+            <button
+              class="btn view-details"
+              data-name="Ms. Sheetal Gandotra"
+              data-role="Associate Professor"
+              data-qual="M.Tech. Computer Sc. &amp; Engg."
+              data-email="sheetalgandotra74@gmail.com"
+            >
+              View details
+            </button>
+          </article>
+          <article class="card faculty-card">
+            <img src="images/faculty/../faculty.svg" alt="Dr. Neeraj Dubey" />
+            <h3>Dr. Neeraj Dubey</h3>
+            <p class="role">Assistant Professor</p>
+            <p>Computer Science Department</p>
+            <button
+              class="btn view-details"
+              data-name="Dr. Neeraj Dubey"
+              data-role="Assistant Professor"
+              data-qual="Not available"
+              data-email="singneeraj@rediffmail.com"
+            >
+              View details
+            </button>
+          </article>
+          <article class="card faculty-card">
+            <img src="images/faculty/../faculty.svg" alt="Dr. Faculty Name" />
+            <h3>Dr. Faculty Name</h3>
+            <p class="role">Assistant Professor</p>
+            <p>Computer Science Department</p>
+            <button
+              class="btn view-details"
+              data-name="Dr. Faculty Name"
+              data-role="Assistant Professor"
+              data-qual="Add qualification here"
+              data-email="name@gcetjammu.org.in"
+            >
+              View details
+            </button>
+          </article>
+        </div>
+      </section>
+      <dialog class="modal" id="faculty-dialog">
+        <h3 id="fd-name"></h3>
+        <dl class="info-list" id="fd-info"></dl>
+        <button class="btn" id="fd-close">Close</button>
+      </dialog>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>GCET, Jammu</h3>
+            <p>
+              Quality technical education, practical learning and overall
+              student development.
+            </p>
+          </div>
+          <div>
+            <h3>Quick links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="faculty.html">Faculty</a></li>
+              <li><a href="students.html">Students</a></li>
+              <li><a href="gallery.html">Photo Gallery</a></li>
+              <li><a href="admission.html">Admission Form</a></li>
+              <li><a href="login.html">Student Login</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <p>Email: info@gcetj.edu<br />Phone: +91 12345 67890</p>
+          </div>
+        </div>
+        <p class="footer-bottom">
+          &copy; 2026 Govt. College of Engineering &amp; Technology, Jammu. All
+          Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
